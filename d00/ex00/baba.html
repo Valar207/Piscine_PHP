@@ -1,29 +1,56 @@
-<!-- *********************************************************************** -->
-<!--                                                                         -->
-<!--                                                      :::      ::::::::  -->
-<!-- baba.html                                          :+:      :+:    :+:  -->
-<!--                                                  +:+ +:+         +:+    -->
-<!-- By: vrossi <marvin@42.fr>                      +#+  +:+       +#+       -->
-<!--                                              +#+#+#+#+#+   +#+          -->
-<!-- Created: 2019/10/02 17:21:18 by vrossi            #+#    #+#            -->
-<!-- Updated: 2019/10/02 17:21:39 by vrossi           ###   ########.fr      -->
-<!--                                                                         -->
-<!-- *********************************************************************** -->
-
+<!DOCTYPE html>
 <html>
-<header>
-    <title>Titre</title>
+<head>
+    <meta charset="UTF-8">
+    <title>B.A.B.A</title>
     <style>
-        h1 {color : red;}
+        body
+        {
+            background-color: pink;
+        }
+        .all{
+            width: 900px;
+            margin: 0 auto;
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+        .imgb img{
+            width: 100%;
+            height: 280px;
+        }
+        figure{
+            display: inline-block;
+            width: 49%;
+            margin: auto;
+            text-align: center;
+        }
+        p{
+            font-family: monospace;
+            font-style: italic;
+            text-align: right;
+        }
     </style>
-</header>
+</head>
 
 <body>
-HOP <br/>
-<h1>COOL</h1> <br/>
-<img src="download.jpeg"> <br/>
-<a href="http://www.google.com">lien</a>
-
-
+    <div class="all">
+        <h1>Première page!</h1>
+        <div class="imgb">
+            <figure>
+                <img src="https://www.nephot.com/wp-content/uploads/2017/07/120000.jpg" alt="bed"><br/>
+                <a href="https://www.nephot.com/product/king-size-bed-5/">Buy bed now!</a>
+            </figure>
+            <figure>
+                <img src="http://www.gulmoharlane.com/uploads/gulmoharlane/images/jodhpur-velvet-671121.jpg" alt="sofa"><br/>
+                <a href="https://www.gulmoharlane.com/pages/sofas">Buy sofa now!</a>
+            </figure>
+        </div>
+    </div>
+    <footer>
+        <hr/>
+        <p>© vrossi 2019</p>
+    </footer>
 </body>
 </html>
