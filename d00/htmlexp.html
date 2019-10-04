@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exemple</title>
+    <style>
+        table{border-collapse: collapse;
+        }
+        th,td{border: 1px solid black; padding: 5px;}
+    </style>
+</head>
+<body>
+
+        <h2>Formatage texte</h2>
+        pourcentage : <progress value="50" max="100"></progress><br>
+        <p>CO<sub>2</sub></p><br>
+        <p>100m<sup>2</sup></p><br>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<wbr>bbbbbbbbbbbbbbbbbbbbbbbb</p><br>
+            <abbr title="Hypertext Markup Language">HTML</abbr><br>
+            <p>style pour présenter code : <code>printf("Hello World!")</code></p><br>
+            <p>raccourci : <kbd>Ctrs + S</kbd></p><br>
+            <p>Valeur en pourcentage <meter value="0.25">25%</meter></p><br>
+            <pre>
+                Coucou tout le monde
+                
+                you         pi
+            </pre><br>
+            <p>date <time datetime="2018-01-16 13:25:25">16 janvier 2018</time></p><br>
+            
+            <h2>Liste</h2>
+            <ol start="6">
+                <li>1er</li>
+                <li>2eme</li>
+                <li>3eme</li>
+            </ol>
+            <ol type="A">
+                <li>1er</li>
+                <li>2eme</li>
+                <li>3eme
+                    <ul>
+                        <li>cc</li>
+                    </ul>
+                </li>
+            </ol>
+            <ul>
+                <li>1er</li>
+                <li>2eme
+                    <ul>
+                        <li>etape 1</li>
+                        <li>etape 2</li>
+                        <li>etape 3</li>
+                    </ul>
+                </li>
+                <li>3eme</li>
+            </ul>
+      
+            <h2>Tableau</h2>
+            <table>
+                <caption>Listing jeu video 1</caption>
+                <thead>
+                    <tr>
+                        <th abbr="nom">nom du jeu</th>
+                        <th abbr="genre">genre et type</th>
+                        <th abbr="prix">prix de vente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>gta</td>
+                        <td>aventure</td>
+                        <td>70€</td>
+                    </tr>
+                    <tr>
+                        <td>ratchet et clank</td>
+                        <td>aventure</td>
+                        <td>40€</td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <table>
+                <caption>Listing jeu video 2</caption>
+                <thead>
+                    <tr>
+                        <th>nom</th>
+                        <th colspan="2">type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>gta</th>
+                        <td>aventure</td>
+                        <td rowspan="2">70€</td>
+                    </tr>
+                    <tr>
+                        <th>Fifa</th>
+                        <td>Sport</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        
+        
+    </body>
+    </html>
