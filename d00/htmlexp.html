@@ -98,7 +98,58 @@
                 </tbody>
                 
             </table>
-        
+        <h2>Formulaire</h2>
+        <form method="post" action="" name="form" autocomplete="off">
+            <p><label for="prenom">Nom : </label><input placeholder="Entrer nom..." id="prenom" type="" name="valar"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>mdp : <input type="password" name="valar"><br>
+            <input type="submit" name="Valider">
+            <input type="reset" name="Effacer">
+        </p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off"> 
+           <p>Publier ? <input type="checkbox" name="valar"></p>
+
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Votre choix : <input type="radio" name="choice">Oui <input type="radio" name="choice">Non </p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Color : <input type="color" name="color" value="#FFFFFF"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Date : <input type="date" name="date"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Telephone : <input type="tel" name="tel" autocomplete="off"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Search : <input type="Search" name="Search" autocomplete="off"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>Range : <input type="Range" name="range" min="0" max="100" step="10"></p>
+        </form>
+        <form method="post" action="" name="form" autocomplete="off">
+           <p>number : <input type="number" name="number" value="50" min="0" max="100" step="10"></p>
+        </form>
+        <form method="post" action="" id="if_form" name="form" autocomplete="off">
+            <fieldset form="if_form">
+                <legend>Section</legend>
+                <p>Nom : <input type="text" name="name"></p>
+                <p><input type="submit" name="Valider"></p>
+                <p><textarea name="comment" rows="10" cols="50" placeholder="Votre commentaire" minlength="10" maxlength="200" wrap="soft"></textarea><input type="submit" name="Valider"></p>  
+                <p>choix systeme : <br>
+                    <select name="choix" size="2">
+                        <option>ouais</option>
+                        <option>nan</option>
+                        <option>ptet</option>
+                    </select></p>
+            </fieldset>
+
+        </form>
+
+
         
     </body>
     </html>

@@ -13,7 +13,6 @@
         }
         th, td{
             border: 1px solid;
-            width: 50px;
             height: 10px;
         }
         
@@ -21,193 +20,186 @@
 </head>
 <body>
     <header>
-        <img width="100" height="150" src="https://mediatheques.villeurbanne.fr/wp-content/upload/2019/03/Mendeleiev-%D0%9C%D0%B5%D0%BD%D0%B4.jpg" alt="mendeleiev">
+        <h1>Tableau périodique des éléments</h1>
+        <img wclassth="100" height="150" src="https://mediatheques.villeurbanne.fr/wp-content/upload/2019/03/Mendeleiev-%D0%9C%D0%B5%D0%BD%D0%B4.jpg" alt="mendeleiev">
         <br>
-        <table>
+        <table align="center" title="Tableau périodique des éléments">
             <tr>
-                <th>Période</th>
-                <th id="nb">1</th>
-                <th id="nb">2</th>
-                <th id="nb">3</th>
-                <th id="nb">4</th>
-                <th id="nb">5</th>
-                <th id="nb">6</th>
-                <th id="nb">7</th>
-                <th id="nb">8</th>
-                <th id="nb">9</th>
-                <th id="nb">10</th>
-                <th id="nb">11</th>
-                <th id="nb">12</th>
-                <th id="nb">13</th>
-                <th id="nb">14</th>
-                <th id="nb">15</th>
-                <th id="nb">16</th>
-                <th id="nb">17</th>
-                <th id="nb">18</th>
+                <th class="PG"><p class="G">Groupe</p><p class="P">Période</p></th>
+                <th class="Nb1">1</th>
+                <th class="Nb1" colspan="16"></th>
+                <th class="Nb1">18</th>
             </tr>
             <tr>
-                    <th id="nb">1</th>
-                    <td><h2>H</h2></td>
-                    <td colspan="16"></td>
-                    <td><h2>He</h2></td>            
+                    <th class="Nb2">1</th>
+                    <td class="nonm"><p class="masse">1</p><h2>H</h2><p class="num">1</p></td>
+                    <th class="Nb1">2</th>
+                    <td colspan="10" class="empty"></td>
+                    <th class="Nb1">13</th>
+                    <th class="Nb1">14</th>
+                    <th class="Nb1">15</th>
+                    <th class="Nb1">16</th>
+                    <th class="Nb1">17</th>
+                    <td class="nobleg"><p class="masse">2</p><h2>He</h2><p class="num">1</p></td>            
             </tr>
             <tr>
-                    <th id="nb">2</th>
-                    <td><h2>Li</h2></td>
-                    <td><h2>Be</h2></td>
-                    <td colspan="10"></td>
-                    <td><h2>B</h2></td>
-                    <td><h2>C</h2></td>
-                    <td><h2>N</h2></td>
-                    <td><h2>O</h2></td>
-                    <td><h2>F</h2></td>
-                    <td><h2>Ne</h2></td>
+                    <th class="Nb2">2</th>
+                    <td class="alkalim"><p class="masse">3</p><h2>Li</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">4</p><h2>Be</h2><p class="num">1</p></td>
+                    <td colspan="10" class="empty"></td>
+                    <td class="semim"><p class="masse">5</p><h2>B</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">6</p><h2>C</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">7</p><h2>N</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">8</p><h2>O</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">9</p><h2>F</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">10</p><h2>Ne</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th id="nb">3</th>
-                    <td><h2>Na</h2></td>
-                    <td><h2>Mg</h2></td>
-                    <td colspan="10"></td>
-                    <td><h2>Al</h2></td>
-                    <td><h2>Si</h2></td>
-                    <td><h2>P</h2></td>
-                    <td><h2>S</h2></td>
-                    <td><h2>Cl</h2></td>
-                    <td><h2>Ar</h2></td>
+                    <th class="Nb2">3</th>
+                    <td class="alkalim"><p class="masse">11</p><h2>Na</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">12</p><h2>Mg</h2><p class="num">1</p></td>
+                    <th class="Nb1">3</th>
+                    <th class="Nb1">4</th>
+                    <th class="Nb1">5</th>
+                    <th class="Nb1">6</th>
+                    <th class="Nb1">7</th>
+                    <th class="Nb1">8</th>
+                    <th class="Nb1">9</th>
+                    <th class="Nb1">10</th>
+                    <th class="Nb1">11</th>
+                    <th class="Nb1">12</th>
+                    <td class="basicm"><p class="masse">13</p><h2>Al</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">14</p><h2>Si</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">15</p><h2>P</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">16</p><h2>S</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">17</p><h2>Cl</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">18</p><h2>Ar</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th id="nb">4</th>
-                    <td><h2>K</h2></td>
-                    <td><h2>Ca</h2></td>
-                    <td><h2>Sc</h2></td>
-                    <td><h2>Ti</h2></td>
-                    <td><h2>V</h2></td>
-                    <td><h2>Cr</h2></td>
-                    <td><h2>Mn</h2></td>
-                    <td><h2>Fe</h2></td>
-                    <td><h2>Co</h2></td>
-                    <td><h2>Ni</h2></td>
-                    <td><h2>Cu</h2></td>
-                    <td><h2>Zn</h2></td>
-                    <td><h2>Ga</h2></td>
-                    <td><h2>Ge</h2></td>
-                    <td><h2>As</h2></td>
-                    <td><h2>Se</h2></td>
-                    <td><h2>Br</h2></td>
-                    <td><h2>Kr</h2></td>
+                    <th class="Nb2">4</th>
+                    <td class="alkalim"><p class="masse">19</p><h2>K</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">20</p><h2>Ca</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">21</p><h2>Sc</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">22</p><h2>Ti</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">23</p><h2>V</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">24</p><h2>Cr</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">25</p><h2>Mn</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">26</p><h2>Fe</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">27</p><h2>Co</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">28</p><h2>Ni</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">29</p><h2>Cu</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">30</p><h2>Zn</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">31</p><h2>Ga</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">32</p><h2>Ge</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">33</p><h2>As</h2><p class="num">1</p></td>
+                    <td class="nonm"><p class="masse">34</p><h2>Se</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">35</p><h2>Br</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">36</p><h2>Kr</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th id="nb">5</th>
-                    <td><h2>Rb</h2></td>
-                    <td><h2>Sr</h2></td>
-                    <td><h2>Y</h2></td>
-                    <td><h2>Zr</h2></td>
-                    <td><h2>Nb</h2></td>
-                    <td><h2>Mo</h2></td>
-                    <td><h2>Tc</h2></td>
-                    <td><h2>Ru</h2></td>
-                    <td><h2>Rh</h2></td>
-                    <td><h2>Pd</h2></td>
-                    <td><h2>Ag</h2></td>
-                    <td><h2>Cd</h2></td>
-                    <td><h2>In</h2></td>
-                    <td><h2>Sn</h2></td>
-                    <td><h2>Sb</h2></td>
-                    <td><h2>Te</h2></td>
-                    <td><h2>I</h2></td>
-                    <td><h2>Xe</h2></td>
+                    <th class="Nb2">5</th>
+                    <td class="alkalim"><p class="masse">37</p><h2>Rb</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">38</p><h2>Sr</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">39</p><h2>Y</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">40</p><h2>Zr</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">41</p><h2>Nb</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">42</p><h2>Mo</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">43</p><h2>Tc</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">44</p><h2>Ru</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">45</p><h2>Rh</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">46</p><h2>Pd</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">47</p><h2>Ag</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">48</p><h2>Cd</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">49</p><h2>In</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">50</p><h2>Sn</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">51</p><h2>Sb</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">52</p><h2>Te</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">53</p><h2>I</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">54</p><h2>Xe</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th id="nb">6</th>
-                    <td><h2>Cs</h2></td>
-                    <td><h2>Ba</h2></td>
-                    <td><h2></h2></td>
-                    <td><h2>Hf</h2></td>
-                    <td><h2>Ta</h2></td>
-                    <td><h2>W</h2></td>
-                    <td><h2>Re</h2></td>
-                    <td><h2>Os</h2></td>
-                    <td><h2>Ir</h2></td>
-                    <td><h2>Pt</h2></td>
-                    <td><h2>Au</h2></td>
-                    <td><h2>Hg</h2></td>
-                    <td><h2>Tl</h2></td>
-                    <td><h2>Pb</h2></td>
-                    <td><h2>Bi</h2></td>
-                    <td><h2>To</h2></td>
-                    <td><h2>At</h2></td>
-                    <td><h2>Rn</h2></td>
+                    <th class="Nb2">6</th>
+                    <td class="alkalim"><p class="masse">55</p><h2>Cs</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">56</p><h2>Ba</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="num">57-71</p></td>
+                    <td class="transitionm"><p class="masse">72</p><h2>Hf</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">73</p><h2>Ta</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">74</p><h2>W</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">75</p><h2>Re</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">76</p><h2>Os</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">77</p><h2>Ir</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">78</p><h2>Pt</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">79</p><h2>Au</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">80</p><h2>Hg</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">81</p><h2>Tl</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">82</p><h2>Pb</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">83</p><h2>Bi</h2><p class="num">1</p></td>
+                    <td class="semim"><p class="masse">84</p><h2>Po</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">85</p><h2>At</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">86</p><h2>Rn</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th id="nb">7</th>
-                    <td><h2>Fr</h2></td>
-                    <td><h2>Ra</h2></td>
-                    <td><h2></h2></td>
-                    <td><h2>Rf</h2></td>
-                    <td><h2>Db</h2></td>
-                    <td><h2>Sg</h2></td>
-                    <td><h2>Bh</h2></td>
-                    <td><h2>Hs</h2></td>
-                    <td><h2>Mt</h2></td>
-                    <td><h2>Ds</h2></td>
-                    <td><h2>Rg</h2></td>
-                    <td><h2>Cn</h2></td>
-                    <td><h2>Uut</h2></td>
-                    <td><h2>Uuq</h2></td>
-                    <td><h2>Uup</h2></td>
-                    <td><h2>Uuh</h2></td>
-                    <td><h2>Uus</h2></td>
-                    <td><h2>Uuo</h2></td>
+                    <th class="Nb2">7</th>
+                    <td class="alkalim"><p class="masse">72</p><h2>Fr</h2><p class="num">1</p></td>
+                    <td class="alkalie"><p class="masse">73</p><h2>Ra</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="num">89-103</p></td>
+                    <td class="transitionm"><p class="masse">104</p><h2>Rf</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">105</p><h2>Db</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">106</p><h2>Sg</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">107</p><h2>Bh</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">108</p><h2>Hs</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">109</p><h2>Mt</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">110</p><h2>Ds</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">111</p><h2>Rg</h2><p class="num">1</p></td>
+                    <td class="transitionm"><p class="masse">112</p><h2>Cn</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">113</p><h2>Uut</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">114</p><h2>Uuq</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">115</p><h2>Uup</h2><p class="num">1</p></td>
+                    <td class="basicm"><p class="masse">116</p><h2>Uuh</h2><p class="num">1</p></td>
+                    <td class="halogen"><p class="masse">117</p><h2>Uus</h2><p class="num">1</p></td>
+                    <td class="nobleg"><p class="masse">118</p><h2>Uuo</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th colspan="4"></th>
-                    <td><h2>La</h2></td>
-                    <td><h2>Ce</h2></td>
-                    <td><h2>Pr</h2></td>
-                    <td><h2>Nd</h2></td>
-                    <td><h2>Pm</h2></td>
-                    <td><h2>Sm</h2></td>
-                    <td><h2>Eu</h2></td>
-                    <td><h2>Gd</h2></td>
-                    <td><h2>Tb</h2></td>
-                    <td><h2>Dy</h2></td>
-                    <td><h2>Ho</h2></td>
-                    <td><h2>Er</h2></td>
-                    <td><h2>Tm</h2></td>
-                    <td><h2>Yb</h2></td>
-                    <td><h2>Lu</h2></td>
+                    <th colspan="4" class="empty"></th>
+                    <td class="lanthanide"><p class="masse">57</p><h2>La</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">58</p><h2>Ce</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">59</p><h2>Pr</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">60</p><h2>Nd</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">61</p><h2>Pm</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">62</p><h2>Sm</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">63</p><h2>Eu</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">64</p><h2>Gd</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">65</p><h2>Tb</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">66</p><h2>Dy</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">67</p><h2>Ho</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">68</p><h2>Er</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">69</p><h2>Tm</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">70</p><h2>Yb</h2><p class="num">1</p></td>
+                    <td class="lanthanide"><p class="masse">71</p><h2>Lu</h2><p class="num">1</p></td>
             </tr>
             <tr>
-                    <th colspan="4"></th>
-                    <td><h2>Ac</h2></td>
-                    <td><h2>Th</h2></td>
-                    <td><h2>Pa</h2></td>
-                    <td><h2>U</h2></td>
-                    <td><h2>Np</h2></td>
-                    <td><h2>Pu</h2></td>
-                    <td><h2>Am</h2></td>
-                    <td><h2>Cm</h2></td>
-                    <td><h2>Bk</h2></td>
-                    <td><h2>Cf</h2></td>
-                    <td><h2>Em</h2></td>
-                    <td><h2>Fm</h2></td>
-                    <td><h2>Md</h2></td>
-                    <td><h2>No</h2></td>
-                    <td><h2>Lr</h2></td>
+                    <th colspan="4" class="empty"></th>
+                    <td class="actinide"><p class="masse">89</p><h2>Ac</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">90</p><h2>Th</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">91</p><h2>Pa</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">92</p><h2>U</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">93</p><h2>Np</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">94</p><h2>Pu</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">95</p><h2>Am</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">96</p><h2>Cm</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">97</p><h2>Bk</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">98</p><h2>Cf</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">99</p><h2>Em</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">100</p><h2>Fm</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">101</p><h2>Md</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">102</p><h2>No</h2><p class="num">1</p></td>
+                    <td class="actinide"><p class="masse">103</p><h2>Lr</h2><p class="num">1</p></td>
             </tr>
             
         </tr>
     </table>
-</header>
-
-
-
-
-
-<footer>
-    
+    </header>
+<footer> 
 </footer>
 </body>
-
-
 </html>
