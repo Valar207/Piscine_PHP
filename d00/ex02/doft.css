@@ -9,7 +9,7 @@ body{
 }
 /*TOP-BLOCK*/
 .top-block{
-    width: 75%;
+    width: 80%;
     margin: auto;
     padding: 1%;
     margin-top: 1%;
@@ -39,8 +39,8 @@ body{
     margin-top: 210%;
 }
 .middle{
-    width:73%;
-    margin-left:14%;
+    width:80%;
+    margin-left:10%;
     margin-top:2%;
     text-align: center;
 }
@@ -109,21 +109,21 @@ body{
 .green{
     display:inline-block;
     background-color:#8CFD8E;
-    width:36%;
-    margin-top:-5%;
-    margin-left: 5%;
+    width:32%;
+    margin-top:-3%;
+    margin-left: 7%;
     box-shadow: 8px 8px 5px black;
     border-radius: 10px;
     padding:1%;
     padding-bottom: 5%;
 }
 p{
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     margin:0;
     font-family: Verdana;
 }
 #big{
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-family: Georgia;
 }
 #italic{
@@ -136,15 +136,12 @@ p{
     background-color: #D6D6D6;
     border: 1px solid #505050 ;
     border-radius: 5%;
-    height: 10%;
-    vertical-align: center;
     display:inline-block;
     width:20%;
-    font-size: 0.8vw;
+    font-size: 0.9vw;
 }
 #form{
-    width:65%;
-    height:10%;
+    width:70%;
     display:inline-block;
     margin-top: 1%;
     font-size: 0.8vw;
