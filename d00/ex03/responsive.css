@@ -1,0 +1,97 @@
+header{
+    text-align: center;
+}
+h1{
+    font-size: 1.5vw;
+}
+h2{
+    font-size: 1vw;
+}
+table{
+    border-collapse: separate;
+    text-align: center;
+    margin: auto;
+}
+th, td{
+    border: 2px solid;
+    width: 3.2vw;
+    height: 3.2vw;
+}
+h2{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.Nb1, .Nb2, .P, .G{
+    color: orange;
+    border: none;
+    font-size: 0.8vw;
+}
+.Nb1{
+    vertical-align: bottom;
+}
+.Nb2{
+    text-align: right;
+}
+.P{
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 0;
+}
+.G{
+    text-align: right;
+    margin: 0;
+}
+.empty{
+    border: none;
+}
+.masse, .num{
+    font-size: 0.5vw;
+}
+.masse{
+    text-align: right;
+    margin-bottom: 0.5vw;
+    margin-top: 0.1vw;
+    margin-right: 0.1vw;
+}
+.num{
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0.3vw;
+    margin-left: 0.1vw;
+}
+.alkalim{
+    background-color: #E74713;
+}
+.alkalie{
+    background-color: #F4A000;
+}
+.transitionm{
+    background-color: #FDE50E;
+}
+.basicm{
+    background-color: #6FAE22;
+}
+.semim{
+    background-color: #9AD6E1;
+}
+.nonm{
+    background-color: #A0FFA0;
+}
+.halogen{
+    background-color: #CEADCC;
+}
+.nobleg{
+    background-color: #CB679D;
+}
+.lanthanide{
+    background-color: #B9C702;
+}   
+.actinide{
+    background-color: #84BF81;
+}
+abbr{
+    text-decoration: none;
+}
+#mendeleiev{
+    width: 6vw;
+}

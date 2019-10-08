@@ -3,111 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>Mendeleiev</title>
-    <style>
-        header{
-            text-align: center;
-        }
-        table{
-            border-collapse: separate;
-            text-align: center;
-            margin: auto;
-        }
-        th, td{
-            border: 2px solid;
-            width: 70px;
-            height: 50px;
-
-        }
-        h2{
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-        .Nb1{
-            color: orange;
-            border: none;
-            vertical-align: bottom;
-        }
-        .Nb2{
-            color: orange;
-            border: none;
-            text-align: right;
-        }
-        .P{
-            vertical-align: bottom;
-            text-align: center;
-            color: orange;
-            font-size: 10px;
-            margin-bottom: 0;
-        }
-        .G{
-            text-align: right;
-            color: orange;
-            font-size: 10px;
-            margin: 0;
-        }
-        .PG{
-            border: none;
-        }
-        .empty{
-            border: none;
-        }
-        .masse{
-            font-size: 15px;
-            text-align: right;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .num{
-            text-align: left;
-            font-size: 15px;
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-        .alkalim{
-            background-color: #E74713;
-        }
-        .alkalie{
-            background-color: #F4A000;
-        }
-        .transitionm{
-            background-color: #FDE50E;
-        }
-        .basicm{
-            background-color: #6FAE22;
-        }
-        .semim{
-            background-color: #9AD6E1;
-        }
-        .nonm{
-            background-color: #A0FFA0;
-        }
-        .halogen{
-            background-color: #CEADCC;
-        }
-        .nobleg{
-            background-color: #CB679D;
-        }
-        .lanthanide{
-            background-color: #B9C702;
-        }   
-        .actinide{
-            background-color: #84BF81;
-        }
-        abbr{
-            text-decoration: none;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <header>
         <h1>Tableau périodique des éléments</h1>
-        <img alt="Mendeleiev" width="100" src="https://mediatheques.villeurbanne.fr/wp-content/upload/2019/03/Mendeleiev-%D0%9C%D0%B5%D0%BD%D0%B4.jpg" alt="mendeleiev">
+        <img alt="Mendeleiev" src="https://mediatheques.villeurbanne.fr/wp-content/upload/2019/03/Mendeleiev-%D0%9C%D0%B5%D0%BD%D0%B4.jpg" alt="photo de Mendeleiev" id="mendeleiev">
         <br>
         </header>
         <table>
             <tr>
-                <th class="PG"><p class="G">Groupe</p><p class="P">Période</p></th>
+                <th class="P"><p class="G">Groupe</p><p class="P">Période</p></th>
                 <th class="Nb1">1</th>
                 <th class="Nb1" colspan="16"></th>
                 <th class="Nb1">18</th>
@@ -183,7 +89,7 @@
                     <td class="alkalim"><p class="masse">85,4678</p><abbr title="Rubidium"><h2>Rb</h2><p class="num">37</p></td>
                     <td class="alkalie"><p class="masse">87,62</p><abbr title="Strontium"><h2>Sr</h2><p class="num">38</p></td>
                     <td class="transitionm"><p class="masse">88,9058</p><abbr title="Yttrium"><h2>Y</h2><p class="num">39</p></td>
-                    <td class="transitionm"><p class="masse">91,224</p><abbr title="Zirconium"><h2>Zr</h2><p class="num"></p>40</p></td>
+                    <td class="transitionm"><p class="masse">91,224</p><abbr title="Zirconium"><h2>Zr</h2><p class="num">40</p></td>
                     <td class="transitionm"><p class="masse">92,9064</p><abbr title="Niobium"><h2>Nb</h2><p class="num">41</p></td>
                     <td class="transitionm"><p class="masse">95,94</p><abbr title="Molybdène"><h2>Mo</h2><p class="num">42</p></td>
                     <td class="transitionm"><p class="masse">98,9063</p><abbr title="Technétium"><h2>Tc</h2><p class="num">43</p></td>
