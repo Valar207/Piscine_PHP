@@ -18,6 +18,7 @@ body{
 .top-right-block{
     width:3%;
     float: right;
+    margin-right: -0.6%;
 }
 #d42{
     width:33%;
@@ -28,16 +29,13 @@ body{
     margin-left: 45%;
     margin-top: -0.2%;
 }
-#reload{
-    width:60%;
+#reload, #cross{
+    width:50%;
     display:block;
     margin: auto;
 }
 #cross{
-    width:60%;
-    display:block;
-    margin: auto;
-    margin-top: 170%;
+    margin-top: 190%;
 }
 .middle{
     width:73%;
