@@ -1,16 +1,12 @@
 #!/usr/bin/php
 <?PHP
-$tab = file('php://stdin');
-unset($tab[0]);
-
-
-if ($argv[1] == "moyenne")
+function moyenne($tab)
 {
 	$nb = 0;
-	foreach ($tab as $line)
+	foreach($tab as $elem)
 	{
-		$notes = explode (";", $line);
-		if (strlen($notes[1]) && $notes[2] != "moulinette")
+		$notes = explode(';', $elem);
+		if (strlen($notes[1]) && $notes[2] != 'moulinette')
 		{
 			$moyenne += $notes[1];
 			$nb++;
@@ -19,10 +15,9 @@ if ($argv[1] == "moyenne")
 	echo $moyenne / $nb."\n";
 }
 
-/*
-else if ($argv[1] == "moyenne_user")
+function moyenne_user($tab)
 {
-	asort($tab);
+	sort($tab);
 	foreach ($tab as $key => $item)
 	{
 		$temp = explode (";", $item);
@@ -49,9 +44,10 @@ else if ($argv[1] == "moyenne_user")
 		}
 	}
 }
-else if ($argv[1] == "ecart_moulinette")
+
+function ecart_moulinette($tab)
 {
-	asort($tab);
+	sort($tab);
 	foreach ($tab as $key => $item)
 	{
 		$temp = explode (";", $item);
@@ -79,5 +75,17 @@ else if ($argv[1] == "ecart_moulinette")
 			echo $note[0].":".($moyenne_user - $note_moulinette)."\n";
 		}
 	}
-}*/
+}
+
+if ($argc == 2)
+{
+	$tab = file('php://stdin');
+	unset($tab[0]);
+	if ($argv[1] == 'moyenne')
+		moyenne($tab);
+	if ($argv[1] == 'moyenne_user')
+		moyenne_user($tab);
+	if ($argv[1] == 'ecart_moulinette')
+		ecart_moulinette($tab);
+}
 ?>
