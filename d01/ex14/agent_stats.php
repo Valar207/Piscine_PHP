@@ -14,14 +14,13 @@ function moyenne($tab)
 	}
 	echo $moyenne / $nb."\n";
 }
-
 function moyenne_user($tab)
 {
 	sort($tab);
 	foreach ($tab as $key => $item)
 	{
-		$temp = explode (";", $item);
-		$arr[$temp[0]][$key] = $item;
+		$tmp = explode (";", $item);
+		$arr[$tmp[0]][$key] = $item;
 	}
 	foreach ($arr as $user)
 	{
@@ -44,14 +43,13 @@ function moyenne_user($tab)
 		}
 	}
 }
-
 function ecart_moulinette($tab)
 {
 	sort($tab);
 	foreach ($tab as $key => $item)
 	{
-		$temp = explode (";", $item);
-		$arr[$temp[0]][$key] = $item;
+		$tmp = explode (";", $item);
+		$arr[$tmp[0]][$key] = $item;
 	}
 	foreach ($arr as $user)
 	{
@@ -76,7 +74,6 @@ function ecart_moulinette($tab)
 		}
 	}
 }
-
 if ($argc == 2)
 {
 	$tab = file('php://stdin');
