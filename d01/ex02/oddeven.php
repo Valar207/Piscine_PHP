@@ -4,11 +4,6 @@ while (1)
 {
     echo "Entrez un nombre: ";
     $input = trim(fgets(STDIN));
-    if (feof(STDIN) == TRUE)
-    {
-        echo "\n";
-        exit();     
-    }
     if (is_numeric($input))
     {
         echo "Le chiffre $input est ";
