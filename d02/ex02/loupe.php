@@ -1,20 +1,18 @@
 #!/usr/bin/php
 <?PHP
-$file = file_get_contents($argv[1]);
-if (feof(STDIN) == TRUE)
+function upper2($p)
 {
-    echo "\n";
-    exit();     
+    return ($p[1].strtoupper($p[2]).$p[3]);
 }
-function upper1($file)
+function upper1($p)
 {
-    return ($file[1].strtoupper($file[2]).$file[3].strtoupper($file[4]));
-} 
-function upper2($file)
-{
-    return ($file[1].strtoupper($file[2]).$file[3]);
+        $p[0] = preg_replace_callback("/( title=\")(.*?)(\")/", 'upper2', $p[0]);
+        $p[0] = preg_replace_callback('/(>)(.*?)(<)/s', 'upper2', $p[0]);
+    return($p[0]);
 }
-$r = preg_replace_callback('/(<a.*?title=")(.*?)(">)(.*?<\/)/s', 'upper1', $file);
-$res = preg_replace_callback('/(<a .*>)(.*)(<img)/', 'upper2', $r);
-echo "$res\n";
+if ($argc < 2)
+		exit();
+$page = file_get_contents($argv[1]);
+$page = preg_replace_callback("/(<a)(.*?)(>)(.*)(<\/a>)/s", 'upper1', $page);
+echo $page;
 ?>
