@@ -5,6 +5,7 @@
         $_SESSION['login'] = $_GET['login'];
         $_SESSION['passwd'] = $_GET['passwd'];
     }
+    session_destroy();
 ?>
 <html><body>
 <form action="index.php" method="get">

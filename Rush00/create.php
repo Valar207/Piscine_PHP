@@ -1,10 +1,10 @@
 <?php
     if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] && $_POST['submit'] === "OK") {
-        if (!file_exists("../private"))
-            mkdir("../private");
-        if (!file_exists("../private/passwd"))
-            file_put_contents("../private/passwd", "");
-        $account = unserialize(file_get_contents("../private/passwd"));
+        if (!file_exists("./private"))
+            mkdir("./private");
+        if (!file_exists("./private/passwd"))
+            file_put_contents("./private/passwd", "");
+        $account = unserialize(file_get_contents("./private/passwd"));
         if ($account)
         {
             $exist = 0;
@@ -21,8 +21,8 @@
             $tmp['login'] = $_POST['login'];
             $tmp['passwd'] = hash('whirlpool', $_POST['passwd']);
             $account[] = $tmp;
-            file_put_contents('../private/passwd', serialize($account));
-            echo "OK\n";
+            file_put_contents('./private/passwd', serialize($account));
+            
         }
     } 
     else {
