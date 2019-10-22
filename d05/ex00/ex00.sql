@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS db_vrossi
+CREATE DATABASE `db_vrossi`;
