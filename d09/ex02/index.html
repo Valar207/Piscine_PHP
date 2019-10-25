@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        background-color: rgb(213, 219, 255);
+    }
+    .contain{
+        margin: auto;
+        margin-top: 200px;
+        width: 600px;
+        background-color: bisque;
+        padding: 10px;
+        border-radius: 25px;
+        border : solid rgb(250, 195, 43) 2px;
+        box-shadow: 5px 5px 5px black;
+    }
+    #ft_list{
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        margin: 5px 50px;
+        padding: 20px 0px;
+    }
+    #ft_list>div{
+        background-color: rgb(169, 188, 245);
+        padding: 5px;
+        text-align: center;
+        margin: 20px 50px;
+        border-radius: 25px;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    #ft_list>div:hover{
+        background-color: rgb(238, 162, 169);
+
+    }
+    h2{
+        font-size: 50px;
+        margin:0px;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #New{ 
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+    
+    #New:hover {
+        background-color: #3e8e41;
+    }
+    #New:active {
+        background-color: #323332;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    
+</style>
+<body>
+    <div class="contain">
+        <h2>To do List</h2>
+        <div id="ft_list">
+            
+            
+            
+        </div>
+        <button id="New">New</button>
+    </div>
+    
+    
+    
+    
+    
+    <script src="./todo.js"></script>
+</body>
+</html>

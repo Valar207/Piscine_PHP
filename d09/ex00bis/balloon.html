@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ballon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="ballon" style="height: 200px; width:200px; background-color:#ff0000; border-radius: 50%; margin:auto;" onclick="changeBallon()" onmouseleave="Diminue()"></div>
+    <script>
+
+        var i = 0;
+
+        
+        function changeBallon(){
+            if ($('#ballon').width() >= 200)
+            {
+                $('#ballon').css("width", "+=10");
+                $('#ballon').css("height", "+=10");
+            }
+            if ($('#ballon').width() > 420)
+            {
+                $('#ballon').width(200);
+                $('#ballon').height(200);
+            }
+            i++;
+            if (i > 2)
+                i = 0;
+            if (i == 1)
+                $('#ballon').css('background-color', "green");
+            else if (i == 2)
+                $('#ballon').css('background-color', "blue");
+            else{
+                $('#ballon').css('background-color', "red");
+            }
+        }
+            function Diminue(){
+                i--;
+                if (i < 0)
+                    i = 2;
+                if (i == 1)
+                    $('#ballon').css('background-color', "green");
+                else if (i == 2)
+                    $('#ballon').css('background-color', "blue");
+                else {
+                    $('#ballon').css('background-color', "red");
+                }
+                if ($('#ballon').width() >= 205)
+                {
+                    $('#ballon').css("width", "-=5");
+                    $('#ballon').css("height", "-=5");
+                }
+            }
+            </script>
+        </body>
+        </html>

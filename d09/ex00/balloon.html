@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #ballon{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100%;
+            margin: auto;
+            margin-top: 400px;
+        }
+    </style>
+    <title>Balloon</title>
+    
+</head>
+<body>
+    <div id="ballon"></div>
+    <script>
+        var color = new Array('green', 'blue', 'red');
+        var i = 0;
+        var size = 200;
+        var elem = document.getElementById('ballon');
+        elem.addEventListener("click", changeBallon);
+        elem.addEventListener("mouseleave", diminue);
+        
+        function changeBallon(){
+            if (size >= 200)
+            size += 10;
+            if (size > 420)
+            size = 200;
+            elem.style.width = size + 'px';
+            elem.style.height = size + 'px';
+            i++;
+            if (i > 2)
+                i = 0;
+            elem.style.backgroundColor = color[i];
+        }
+        function diminue(){
+            i--;
+            if (i < 0)
+                i = 2;
+            elem.style.backgroundColor = color[i];
+            if (size >= 205)
+            {
+                size -= 5;
+                elem.style.width = size + 'px';
+                elem.style.height = size + 'px';
+            }
+        }
+    </script>
+</body>
+</html>
