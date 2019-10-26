@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calculatrice</title>
+    <title>Calcululatrice</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 </head>
 <style>
     body{
@@ -43,7 +44,7 @@
         line-height: 1.3;
         padding: .6em 1.4em .5em 
     }
-    #result {
+    #submit {
         display: block;
         margin: auto;
         margin-top: 25px;
@@ -59,11 +60,10 @@
         border-radius: 15px;
         box-shadow: 0 9px #999;
     }
-    #result:hover {
+    #submit:hover {
         background-color: #3e8e41;
     }
-    
-    #result:active {
+    #submit:active {
         background-color: #323332;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
@@ -72,7 +72,7 @@
 </style>
 <body>
     <div class="contain">
-        <div id="calcul">
+        <form action="" id="calcul">
             <input type="text" id="val1">
             <select name="operator" id="operator">
                 <option value="+">+</option>
@@ -82,57 +82,66 @@
                 <option value="%">%</option>
             </select>
             <input type="text" id="val2">
-            <input type="submit" value="Try me!" id="result">
-        </div>
-    </div>   
+            <input type="submit" value="Try me!" id="submit">
+        </form>
+    </div>  
     <script>     
-        var result = document.getElementById('result');
-        setInterval(function(){ alert("Please, use me..."); }, 30000);
-        result.addEventListener('click', Operation);
-        
-        function Operation(){
-            
-            var v1 = document.getElementById('val1').value;
-            var v2 = document.getElementById('val2').value;
-            var op = document.getElementById('operator').value;
-            var result;
-            v1 = parseFloat(v1);
-            v2 = parseFloat(v2);
-            if (v1 < 0 || v2 < 0 || isNaN(v1) || isNaN(v2)){
+        var calcul;
+        var left;
+        var right;
+        var op;
+        $(document).ready(function(){
+            calcul = $('#calcul');
+            left = $('#val1');
+            right = $('#val2');
+            op = $('#operator');
+            calcul.submit(submit);
+            setInterval("alert('Please, use me...')", 30000);
+        });
+        function numIsValid(l, r) {
+            return l == parseInt(l, 10) && l >= 0 && r == parseInt(r, 10) && r >= 0;
+        }
+        function submit(event) {
+            event.preventDefault();
+            var l = Number(left.val());
+            var r = Number(right.val());
+            if (!numIsValid(left.val(), right.val())) {
                 alert("Error :(");
-                return;
+                return false;
             }
-            if (v1 !== parseInt(v1) || v2 !== parseInt(v2)){
-                alert("Error :(");
-                return;
-            }
-            if (op == '-')
-                result = v1 - v2;
-            else if (op == '+')
-                result = v1 + v2;
-            else if (op == '*')
-                result = v1 * v2;
-            else if (op == '/'){
-                if (v2 == 0){
-                    console.log("It’s over 9000!");
-                    alert("It’s over 9000!");
-                    return;
+            switch (op.val()) {
+                case ('+'):
+                result(l + r);
+                break;
+                case ('*'):
+                result(l * r);
+                break;
+                case ('/'):
+                if (r === 0) {
+                    result("It’s over 9000!");
+                } else {
+                    result(l / r);
                 }
-                else
-                    result = v1 / v2;
-            }
-            else if (op == '%'){
-                if (v2 == 0){
-                    console.log("It’s over 9000!");
-                    alert("It’s over 9000!");
-                    return;
+                break;
+                case ('%'):
+                if (r === 0) {
+                    result("It’s over 9000!");
+                } else {
+                    result(l / r);
                 }
-                else
-                    result = v1 % v2;
+                break;
+                case ('-'):
+                result(l - r);
+                break;
+                default:
+                result("operation not found");
+                break;
             }
-            console.log(result);
-            alert(result);
-        }       
-    </script>
+        }
+        function result(res) {
+            console.log(res);
+            alert(res);
+        }
+    </script> 
 </body>
 </html>

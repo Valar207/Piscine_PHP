@@ -1,42 +1,40 @@
 var elems;
 var cookie = [];
 
-window.onload = function () {
-    document.querySelector("#New").addEventListener("click", newContent);
-    elems = document.querySelector("#ft_list");
+$(document).ready(function(){
+    $('#New').click(newTodo);
+    $('#ft_list div').click(deleteTodo);
+    elems = $('#ft_list');
     var tmp = document.cookie;
     if (tmp) {
         cookie = JSON.parse(tmp);
         cookie.forEach(function (e) {
-            Add(e);
+            addTodo(e);
         });
     }
-};
+});
 
-window.onunload = function () {
-    var todo = elems.children;
+$(window).unload(function(){
+    var todo = ft_list.children();
     var newCookie = [];
     for (var i = 0; i < todo.length; i++)
         newCookie.unshift(todo[i].innerHTML);
     document.cookie = JSON.stringify(newCookie);
-};
+})
 
-function newContent(){
+function newTodo(){
     var todo = prompt("Nouvel élément :", '');
     if (todo !== '' && todo.trim()) {
-        Add(todo)
+        addTodo(todo)
     }
 }
 
-function Add(todo){
-    var div = document.createElement("div");
-    div.innerHTML = todo;
-    div.addEventListener("click", deleteTodo);
-    elems.insertBefore(div, elems.firstChild);
+function addTodo(todo){
+    elems.prepend($('<div>' + todo + '</div>').click(deleteTodo));
 }
 
 function deleteTodo(){
     if (confirm("Êtes vous sûr de vouloir supprimer cet élément ?")){
-        this.parentElement.removeChild(this);
+        this.remove();
     }
 }

@@ -3,15 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>Ballon</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="ballon" style="height: 200px; width:200px; background-color:#ff0000; border-radius: 50%; margin:auto;" onclick="changeBallon()" onmouseleave="Diminue()"></div>
+
+    <style>
+        #ballon{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100%;
+            margin: auto;
+            margin-top: 400px;
+        }
+    </style>
     <script>
-
         var i = 0;
+        var balloon;
+    
+        $(document).ready(function(){
+            balloon = $('#ballon');
+            balloon.click(changeBallon);
+            balloon.mouseleave(Diminue);
+        })
 
-        
         function changeBallon(){
             if ($('#ballon').width() >= 200)
             {
@@ -52,5 +66,8 @@
                 }
             }
             </script>
+            <body>
+                    <div id="ballon"></div>
+
         </body>
         </html>
