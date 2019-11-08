@@ -3,10 +3,7 @@
 if ($argc == 2)
 {
     if ($argv[1] == "mais pourquoi cette demo ?")
-    {
-        echo "Tout simplement pour qu'en feuilletant le sujet\n";
-        echo "on ne s'apercoive pas de la nature de l'exo\n";
-    }
+        echo "Tout simplement pour qu'en feuilletant le sujet\non ne s'apercoive pas de la nature de l'exo\n";
     if ($argv[1] == "mais pourquoi cette chanson ?")
         echo "Parce que Kwame a des enfants\n";
     if ($argv[1] == "vraiment ?")

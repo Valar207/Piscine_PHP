@@ -30,14 +30,16 @@ if ($argc == 2)
 		{
 			if (strpos($argv[1], "+") == true)
 				echo $res[0] + $res[1]."\n";
-			if (strpos($argv[1], "-") == true)
+			else if (strpos($argv[1], "-") == true)
 				echo $res[0] - $res[1]."\n";
-			if (strpos($argv[1], "*") == true)
+			else if (strpos($argv[1], "*") == true)
 				echo $res[0] * $res[1]."\n";
-			if (strpos($argv[1], "/") == true)
+			else if (strpos($argv[1], "/") == true && $res[1] != 0)
 				echo $res[0] / $res[1]."\n";
-			if (strpos($argv[1], "%") == true)
+			else if (strpos($argv[1], "%") == true && $res[1] != 0)
 				echo $res[0] % $res[1]."\n";
+			else
+				return;
 		}
 		else
 			echo "Syntax Error\n";
