@@ -2,9 +2,13 @@
 <?php
 function ft_split($input)
 {
-    $tmp = trim(preg_replace('/\s+/', ' ', $input));
-    $res = explode(' ', $tmp);
-    sort($res);
-    return($res);
+    if (trim($input) == NULL)
+        return;
+    else{
+        $tmp = trim(preg_replace('/\s+/', ' ', $input));
+        $res = explode(' ', $tmp);
+        sort($res);
+        return($res);
+    }
 }
 ?>
