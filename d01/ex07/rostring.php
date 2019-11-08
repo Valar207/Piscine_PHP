@@ -7,6 +7,8 @@ function ft_split($input)
 }
 if ($argc > 1)
 {
+    if (trim($argv[1]) == NULL)
+        return;
     $r = ft_split($argv[1]);
     $tmp = explode(' ', $r);
     $i = 1;
