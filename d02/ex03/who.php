@@ -10,9 +10,9 @@ while (!feof($file))
         $res = unpack("a256user/a4id/a32line/ipid/itype/itime", $res);
         if ($res['type'] == 7)
         {
-            echo trim($res['user'])."   ";
+            echo trim($res['user'])." ";
             echo trim($res['line'])."  " ;
-            echo (date("M d H:i", $res['time']))."\n";
+            echo (date("M d H:i", $res['time']))." \n";
         }
     }
 }
