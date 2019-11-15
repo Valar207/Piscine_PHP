@@ -2,8 +2,8 @@
 session_start();
 include('auth.php');
 
-$login = $_POST['login'];
-$passwd = $_POST['passwd'];
+$login = $_GET['login'];
+$passwd = $_GET['passwd'];
 
 if (auth($login,$passwd) == TRUE)
 {

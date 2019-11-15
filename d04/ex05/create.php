@@ -1,8 +1,8 @@
 <?php
     session_start();
-    $login = $_POST['login'];
-    $passwd = $_POST['passwd'];
-    $submit = $_POST['submit'];
+    $login = $_GET['login'];
+    $passwd = $_GET['passwd'];
+    $submit = $_GET['submit'];
 
     if ($login && ($passwd || $passwd == '0') && $submit && $submit === 'OK')
     {

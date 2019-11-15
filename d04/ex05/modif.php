@@ -1,9 +1,9 @@
 <?php
     session_start();
-    $login = $_POST['login'];
-    $oldpw = $_POST['oldpw'];
-    $newpw = $_POST['newpw'];
-    $submit = $_POST['submit'];
+    $login = $_GET['login'];
+    $oldpw = $_GET['oldpw'];
+    $newpw = $_GET['newpw'];
+    $submit = $_GET['submit'];
 
     if ($login && ($oldpw || $oldpw == '0') && ($newpw || $newpw == '0') && $submit && $submit === 'OK' && $newpw !== $oldpw)
     {
