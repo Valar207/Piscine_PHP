@@ -1,0 +1,13 @@
+.list{
+    list-style: none;
+}
+ul li{
+    display: inline;
+}
+
+
+
+
+body{
+    background-color: #F4F3F4;
+}
