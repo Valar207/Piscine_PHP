@@ -1,7 +1,8 @@
 <?php
 
 if (isset($_POST['login-submit'])){
-    require "dbh.inc.php";
+
+    $conn = mysqli_connect("localhost", "root", "valar207", "commerce");
 
     $mailuid = $_POST['mailuid'];
     $pwd = $_POST['pwd'];
@@ -31,7 +32,7 @@ if (isset($_POST['login-submit'])){
                     session_start();
                     $_SESSION['userId'] = $row['idUsers'];
                     $_SESSION['userUid'] = $row['uidUsers'];
-                    header("Location: ../index.php?login=success");
+                    header("Location: ../index.php?login=success&user=".$_SESSION['userUid']);
                     exit();
                 }
             }
