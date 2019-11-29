@@ -1,0 +1,23 @@
+body{
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(85, 163, 75);
+    width: 100%;
+}
+
+.signupf{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+input{
+    margin: 5px;
+}
+
+
