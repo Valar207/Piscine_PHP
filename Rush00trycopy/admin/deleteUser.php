@@ -10,11 +10,17 @@
                     {
                         echo    '<div class="text-center">';
                         if ($_GET['error'] == "emptyfields")
-                            echo                '<p class="error-msg">You need to fill all the fields</p>';
+                            echo '<p class="error-msg">You need to fill all the fields</p>';
                         if ($_GET['error'] == "sqlerror")
-                            echo                '<p class="error-msg">Could not delete the user</p>';
+                            echo '<p class="error-msg">This user doesn\'t exist</p>';
                         echo    '</div>';
                     }
+                    if (isset($_GET['user']))
+                    {
+                        if ($_GET['user'] == "deleted")
+                            echo '<p class="text-center success-msg">User successfully deleted</p>';
+                    }
+
                 ?>
                 <form action="includes/deleteUser.inc.php" method="post" class="text-center">
                     <input type="text" name="name-user" placeholder="Name of the user">

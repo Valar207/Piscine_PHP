@@ -22,7 +22,7 @@
                         if ($_GET['error'] == "usertaken")
                             echo '<p class="error-msg">Username taken</p>';
                         if ($_GET['signup'] == "success")
-                            echo '<p class="success-msg">Signed up successfully</p>';
+                            echo '<p class="success-msg">You signed up successfully</p>';
                         echo '</div>';
                     }
                 ?>

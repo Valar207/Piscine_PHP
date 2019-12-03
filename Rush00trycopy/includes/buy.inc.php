@@ -23,7 +23,7 @@
             }
         }
         unset($_SESSION['articles']);
-        header("Location: ../index.php?order=success");
+        header("Location: ../cart.php?order=success");
         exit();
         mysqli_stmt_close($stmt);
         mysqli_close($conn);

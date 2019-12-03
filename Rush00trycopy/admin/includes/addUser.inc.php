@@ -50,7 +50,7 @@
 						$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
                         mysqli_stmt_bind_param($stmt, "ssis", $username, $email, $admin, $hashedPwd);
                         mysqli_stmt_execute($stmt);
-                        header("Location: ../admin.php?user=added");
+                        header("Location: ../addUser.php?user=added");
                         exit();
                     }
                 }

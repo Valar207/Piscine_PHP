@@ -6,13 +6,15 @@
                 <h3 class="text-center">Delete category</h3>
                 <hr />
                 <?php
-                    if (isset($_GET['error']))
+                    if (isset($_GET['error']) || isset($_GET['category']))
                     {
-                        echo    '<div class="text-center">';
+                        echo '<div class="text-center">';
                         if ($_GET['error'] == "emptyfields")
-                            echo                '<p class="error-msg">You need to fill all the fields</p>';
+                            echo '<p class="error-msg">You need to fill all the fields</p>';
                         if ($_GET['error'] == "sqlerror")
-                            echo                '<p class="error-msg">Could not delete the category</p>';
+                            echo '<p class="error-msg">Could not delete the category</p>';
+                        if ($_GET['category'] == "deleted")
+                            echo '<p class="success-msg">Category deleted succesfully</p>';
                         echo    '</div>';
                     }
                 ?>
@@ -23,4 +25,4 @@
             </div>
         </main>
     </body>
-</html>
+</html> 

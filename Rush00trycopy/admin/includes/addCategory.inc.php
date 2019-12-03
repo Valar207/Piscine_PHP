@@ -43,7 +43,7 @@
                     {
                         mysqli_stmt_bind_param($stmt, "s", $name);
                         mysqli_stmt_execute($stmt);
-                        header("Location: ../admin.php?category=added");
+                        header("Location: ../addCategory.php?category=added");
                         exit();
                     }
                 }

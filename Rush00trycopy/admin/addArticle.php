@@ -11,6 +11,8 @@
                         echo '<div class="text-center">';
                         if ($_GET['error'] == "emptyfields")
                             echo '<p class="error-msg">You need to fill in all the fields</p>';
+                        if ($_GET['error'] == "couldnotuploadfile1")
+                            echo '<p class="error-msg">You need to upload an image</p>';
                         if ($_GET['error'] == "nametaken")
                             echo '<p class="error-msg">This name is already taken</p>';
                         if ($_GET['article'] == "added")

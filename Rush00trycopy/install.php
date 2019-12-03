@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $dBUsername = "root";
-    $dBPassword = "rootroot";
+    $dBPassword = "root";
     $dbName = "JEUX";
 
     $conn = mysqli_connect($servername, $dBUsername, $dBPassword);

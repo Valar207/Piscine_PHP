@@ -44,7 +44,7 @@
         $result = mysqli_query($conn, $sql);
         if ($result)
         {
-            header("Location: ../admin.php?user=saved");
+            header("Location: ../modifyUser.php?user=saved");
             exit();
         }
         else

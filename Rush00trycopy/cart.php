@@ -71,16 +71,21 @@
                     }
                     else
                     {
-                        echo '<div class="text-center">
-                                <button class="btn" type="submit" name="buy-submit" disabled>Buy now</button>
-                            </div>
-                            <div class="text-center">
+                        echo '
+                        <div class="text-center">
                                 <p>You must signup or login in order to buy!</p>
-                            </div>';
+                                <button class="btn" type="submit" name="buy-submit" disabled>Buy now</button>
+                        </div>';
                     }
                 }
                 else
-                {
+                {                        
+                    if ($_GET['order'] == 'success')
+                        echo '
+                            <div class="rr success-msg text-center">
+                                Order successfull, you will receive your items in less than a week
+                            </div>';
+
                     echo    '<div class="card text-center">
                                 <p>Your cart is empty</p>
                             </div>';

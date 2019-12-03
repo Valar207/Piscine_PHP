@@ -12,10 +12,27 @@
         }
         else
         {
-            $sql = "SELECT idCategories, nameCategories FROM categories WHERE nameCategories = '" . mysqli_real_escape_string($conn, $name) . "'";
-            $result = mysqli_query($conn, $sql);
-            if ($result)
+            $sql = "SELECT idCategories, nameCategories FROM categories WHERE nameCategories = ?";
+            $stmt = mysqli_stmt_init($conn);
+            if (!mysqli_stmt_prepare($stmt, $sql)){
+                header("Location: ../admin.php?error=sqlerror");
+                exit();
+            }
+            mysqli_stmt_bind_param($stmt, 's', $name);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_store_result($stmt);
+            $res = mysqli_stmt_num_rows($stmt);
+            if ($res >= 1)
             {
+                $sql = "SELECT idCategories, nameCategories FROM categories WHERE nameCategories = ?";
+                $stmt = mysqli_stmt_init($conn);
+                if (!mysqli_stmt_prepare($stmt, $sql)){
+                    header("Location: ../admin.php?error=sqlerror");
+                    exit();
+                }
+                mysqli_stmt_bind_param($stmt, 's', $name);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
                 $row = mysqli_fetch_assoc($result);
                 session_start();
                 $_SESSION['categoryId'] = $row['idCategories'];
@@ -38,11 +55,21 @@
         $id = $_POST['id-category'];
         $name = $_POST['name-category'];
 
+        $sql = "SELECT idCategories FROM categories WHERE nameCategories = ?";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            header("Location: ../admin.php?error=sqlerror");
+            exit();
+        }
+        mysqli_stmt_bind_param($stmt, 's', $name);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
         $sql = "UPDATE categories SET nameCategories='" . mysqli_real_escape_string($conn, $name) . "' WHERE idCategories='" . mysqli_real_escape_string($conn, $id) . "'";
         $result = mysqli_query($conn, $sql);
         if ($result)
         {
-            header("Location: ../admin.php?category=saved");
+            header("Location: ../modifyCategory.php?success=saved&category=exists");
             exit();
         }
         else

@@ -7,10 +7,21 @@
 
         if (!empty($name))
         {
-            $sql = "DELETE FROM categories WHERE nameCategories = '" .  mysqli_real_escape_string($conn, $name) . "'";
-            if (mysqli_query($conn, $sql))
+            $sql = "SELECT nameCategories FROM categories WHERE nameCategories = ?";
+            $stmt = mysqli_stmt_init($conn);
+            if (!mysqli_stmt_prepare($stmt, $sql)){
+                header("Location: ../admin.php?error=sqlerror");
+                exit();
+            }
+            mysqli_stmt_bind_param($stmt, 's', $name);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_store_result($stmt);
+            $res = mysqli_stmt_num_rows($stmt);
+            if ($res == 1)
             {
-                header("Location: ../admin.php?category=deleted");
+                $sql = "DELETE FROM categories WHERE nameCategories = '" .  mysqli_real_escape_string($conn, $name) . "'";
+                mysqli_query($conn, $sql);
+                header("Location: ../deleteCategory.php?category=deleted");
                 exit();
             }
             else

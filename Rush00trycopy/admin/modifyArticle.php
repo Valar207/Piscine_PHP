@@ -15,10 +15,10 @@
                                 }
                         echo    '<form action="includes/modifyArticle.inc.php" method="post">
                                     <input type="hidden" name="id-article" value = "' . $_SESSION['articleId'] . '">
-                                    <div>Name of the article:</div>
+                                    <div class="text-center">New name of the article:</div>
                                     <input type="text" name="name-article" placeholder="Name of the article" value = "' . $_SESSION['articleName'] . '">
-                                    <div>Price of the article:</div>
-                                    <input type="number" name="price-article" placeholder="Price of the article" value = "' . $_SESSION['articlePrice'] . '">
+                                    <div class="text-center">Price of the article:</div>
+                                    <input type="number" step=0.01 min="0.01" name="price-article" placeholder="Price of the article" value = "' . $_SESSION['articlePrice'] . '">
                                     <div class="text-center">
                                         <button class="btn" type="submit" name="save-article-submit">Save</button>
                                     </div>

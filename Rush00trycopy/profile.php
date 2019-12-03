@@ -35,7 +35,7 @@
                             </div>';
                 }
                 else
-                    echo    '<p class="text-center">You first need to Login or Signup to access to your profile</p>';
+                    echo    '<p class="text-center">You first need to Login or Signup to access your profile</p>';
                 ?>
             </div>
         </main>

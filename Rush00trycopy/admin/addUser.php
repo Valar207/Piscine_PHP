@@ -10,10 +10,15 @@
                     {
                         echo    '<div class="text-center">';
                         if ($_GET['error'] == "emptyfields")
-                            echo                '<p class="error-msg">You need to fill all the fields</p>';
+                            echo '<p class="error-msg">You need to fill all the fields</p>';
                         if ($_GET['error'] == "nametaken")
-                            echo                '<p class="error-msg">This name is already taken</p>';
+                            echo '<p class="error-msg">This name is already taken</p>';
                         echo    '</div>';
+                    }
+                    if (isset($_GET['user']))
+                    {
+                        if ($_GET['user'] == "added")
+                            echo '<p class="text-center success-msg">User successfully added</p>';
                     }
                 ?>
                 <form action="includes/addUser.inc.php" method="post" class="text-center">

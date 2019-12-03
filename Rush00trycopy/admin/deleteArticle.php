@@ -16,7 +16,7 @@
                         elseif ($_GET['error'] == "noexist")
                             echo '<p class="error-msg">Article doesn\'t exist</p>';
                         elseif ($_GET['article'] == "deleted")
-                            echo '<p class="success-msg">Article succesfully deleted</p>';
+                            echo '<p class="success-msg">Article deleted succesfully</p>';
                         echo '</div>';
                     }
                 ?>
