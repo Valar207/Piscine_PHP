@@ -3,7 +3,7 @@
 ?>
         <main>
             <div class="card">
-                <h3 class="text-center">Add a user</h3>
+                <h3 class="text-center">Add user</h3>
                 <hr />
                 <?php
                     if (isset($_GET['error']))

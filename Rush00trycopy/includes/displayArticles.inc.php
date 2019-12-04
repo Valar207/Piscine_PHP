@@ -23,7 +23,8 @@
                                         <input type="hidden" name="quantity-article" value = "1">';
                     if (isset($_GET['category']))
                         echo            '<input type="hidden" name="category" value = "' . $_GET['category'] . '">';
-                    echo                '<button class="btn" type="submit" name="add-submit">Add to cart</button>
+                    echo                '<input type="number" min="1" id="qt" name="quantity-article" value = "0">
+                                        <button class="btn" type="submit" name="add-submit">Add to cart</button>
                                     </form>
                                 </div>
                             </div>';
@@ -48,7 +49,7 @@
                                     <p >' . $row['priceArticles'] . '€</p>
                                     <form action="includes/addToCart.inc.php" method="post" class="text-center">
                                         <input type="hidden" name="id-article" value = "' . $row['idArticles'] . '">
-                                        <input type="hidden" name="quantity-article" value = "1">
+                                        <input type="number" min="1" id="qt" name="quantity-article" value = "0">
                                         <button class="btn" type="submit" name="add-submit">Add to cart</button>
                                     </form>
                                 </div>

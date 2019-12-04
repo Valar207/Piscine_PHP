@@ -8,7 +8,7 @@
                     if ($_GET['category'] == "exists")
                     {
                         echo '<div class="card">
-                                <h3 class="text-center">Modify a category</h3>
+                                <h3 class="text-center">Modify category</h3>
                                 <hr />';
                         if ($_GET['success'] == "saved")
                             echo '<p class="text-center success-msg">Category successfully changed</p>';
@@ -25,7 +25,7 @@
                 else
                 {
                     echo    '<div class="card">
-                                <h3 class="text-center">Modify a category</h3>
+                                <h3 class="text-center">Modify category</h3>
                                 <hr />';
                     if (isset($_GET['error']))
                     {

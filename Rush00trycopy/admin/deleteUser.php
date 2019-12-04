@@ -10,7 +10,7 @@
                     {
                         echo    '<div class="text-center">';
                         if ($_GET['error'] == "emptyfields")
-                            echo '<p class="error-msg">You need to fill all the fields</p>';
+                            echo '<p class="error-msg">You need to fill in all the fields</p>';
                         if ($_GET['error'] == "sqlerror")
                             echo '<p class="error-msg">This user doesn\'t exist</p>';
                         echo    '</div>';
