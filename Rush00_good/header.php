@@ -6,6 +6,7 @@
     <head>
         <meta charset="utf-8">
         <title>GameCom</title>
+        <link rel="icon" type="image/gif/png" href="./img/game_img.jpg">
         <link rel="stylesheet" href="style.css?version=1">
     </head>
     <body>
