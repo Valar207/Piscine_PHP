@@ -5,13 +5,15 @@
             <?php
                 if (isset($_GET['category']))
                 {
-                    if ($_GET['category'] == "exists")
+                    if ($_GET['category'] == "exists" || $_GET['category'] == "empty")
                     {
                         echo '<div class="card">
                                 <h3 class="text-center">Modify category</h3>
                                 <hr />';
                         if ($_GET['success'] == "saved")
                             echo '<p class="text-center success-msg">Category successfully changed</p>';
+                        if ($_GET['category'] == "empty")
+                            echo '<p class="text-center error-msg">You need to fill in all the fields</p>';
                         echo '<form action="includes/modifyCategory.inc.php" method="post">
                                     <input type="hidden" name="id-category" value = "' . $_SESSION['categoryId'] . '">
                                     <input type="text" name="name-category" placeholder="New name of category" value = "' . $_SESSION['categoryName'] . '">

@@ -55,6 +55,11 @@
         $id = $_POST['id-category'];
         $name = $_POST['name-category'];
 
+        if(empty($name))
+        {
+            header("Location: ../modifyCategory.php?category=empty");
+            exit();
+        }
         $sql = "SELECT idCategories FROM categories WHERE nameCategories = ?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
