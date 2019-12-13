@@ -4,7 +4,7 @@
         require "../../includes/dbh.inc.php";
 
         $name = $_POST['name-article'];
-
+        $name = trim($name);
         if (empty($name))
         {
             header("Location: ../modifyArticle.php?error=emptyfields");
@@ -57,7 +57,6 @@
         $id = $_POST['id-article'];
         $name = $_POST['name-article'];
         $price = $_POST['price-article'];
-
         $name = trim($name);
         if (empty($name))
         {
