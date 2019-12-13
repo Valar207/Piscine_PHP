@@ -5,6 +5,7 @@
 
         $name = $_POST['name-article'];
 
+        $name = trim($name);        
         if (!empty($name))
         {
             $sql = "SELECT nameArticles FROM articles WHERE nameArticles=?";

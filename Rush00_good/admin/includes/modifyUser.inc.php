@@ -4,7 +4,7 @@
         require "../../includes/dbh.inc.php";
 
         $name = $_POST['name-user'];
-
+        $name = trim($name);        
         if (empty($name))
         {
             header("Location: ../modifyUser.php?error=emptyfields");

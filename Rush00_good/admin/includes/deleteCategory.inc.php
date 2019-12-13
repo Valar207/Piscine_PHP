@@ -4,7 +4,7 @@
         require "../../includes/dbh.inc.php";
 
         $name = $_POST['name-category'];
-
+        $name = trim($name);        
         if (!empty($name))
         {
             $sql = "SELECT nameCategories FROM categories WHERE nameCategories = ?";
