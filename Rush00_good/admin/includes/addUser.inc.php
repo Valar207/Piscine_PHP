@@ -11,6 +11,7 @@
 		else
 			$admin = NULL;
 
+        $username = trim($username);
         if (empty($username) || empty($email) || empty($password))
         {
             header("Location: ../addUser.php?error=emptyfields");

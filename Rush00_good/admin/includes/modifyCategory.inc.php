@@ -55,6 +55,7 @@
         $id = $_POST['id-category'];
         $name = $_POST['name-category'];
 
+        $name = trim($name);
         if(empty($name))
         {
             header("Location: ../modifyCategory.php?category=empty");

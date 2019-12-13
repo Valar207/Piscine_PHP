@@ -7,6 +7,7 @@
         $price = $_POST['price-article'];
         $categories = $_POST['categories'];
 
+        $name = trim($name);        
         if (empty($name) || empty($price) || empty($categories))
         {
             header("Location: ../addArticle.php?error=emptyfields");

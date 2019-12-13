@@ -58,6 +58,13 @@
         $name = $_POST['name-article'];
         $price = $_POST['price-article'];
 
+        $name = trim($name);
+        if (empty($name))
+        {
+            header("Location: ../modifyArticle.php?article=empty");
+            exit();
+        }
+
         $sql = "SELECT idArticles FROM articles WHERE nameArticles = ?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){

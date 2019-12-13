@@ -5,14 +5,15 @@
             <?php
                 if (isset($_GET['article']))
                 {
-                    if ($_GET['article'] == "exists")
+                    if ($_GET['article'] == "exists" || $_GET['article'] == "empty")
                     {
                         echo '<div class="card">
                                 <h3 class="text-center">Modify an article</h3>
                                 <hr />';
-                                if ($_GET['success'] == 'saved'){
+                                if ($_GET['success'] == 'saved')
                                     echo '<p class="text-center success-msg">Changes saved</p>';
-                                }
+                                if ($_GET['article'] == 'empty')
+                                    echo '<p class="text-center error-msg">You need to fill in all the fields</p>';
                         echo    '<form action="includes/modifyArticle.inc.php" method="post">
                                     <input type="hidden" name="id-article" value = "' . $_SESSION['articleId'] . '">
                                     <div class="text-center">New name of the article:</div>
